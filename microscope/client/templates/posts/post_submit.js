@@ -13,7 +13,7 @@ Template.postSubmit.events({
 				return alert(error.reason);
 			}
 
-			Router.go('postPage', post);
+			Router.go('postPage', {_id: result._id});
 		});
 	}
 });
