@@ -13,6 +13,11 @@ Template.postSubmit.events({
 				return alert(error.reason);
 			}
 
+			//if duplicate, alert user and route them anyway
+			if (result.postExists){
+				alert('This link has already been posted');
+			}
+
 			Router.go('postPage', {_id: result._id});
 		});
 	}
